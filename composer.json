@@ -1,0 +1,18 @@
+{
+    "name": "tmaxham/laravel-newsletter",
+    "description": "A package to manage newsletters in larave 5",
+    "authors": [
+        {
+            "name": "TobyMaxham",
+            "email": "git2015@maxham.de"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "TobyMaxham\\Newsletter\\": "src"
+        }
+    }
+}
