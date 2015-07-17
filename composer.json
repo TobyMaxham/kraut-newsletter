@@ -1,18 +1,27 @@
 {
-    "name": "tobymaxham/laravel-newsletter",
+
+    "name": "tobymaxham/kraut-newsletter",
     "description": "A package to manage newsletters in larave 5",
+    "keywords": ["tobymaxham", "laravel", "nesletter", "sauerkraut"],
+    "license": "MIT",
     "authors": [
         {
             "name": "TobyMaxham",
             "email": "git2015@maxham.de"
         }
     ],
+    "homepage": "http://maxham.de",
+    "support": {
+        "issues": "https://github.com/TobyMaxham/kraut-newsletter/issues",
+        "source": "https://github.com/TobyMaxham/kraut-newsletter"
+    },
     "require": {
-
+        "php": ">=5.5.9"
     },
     "autoload": {
         "psr-4": {
             "TobyMaxham\\Newsletter\\": "src"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
