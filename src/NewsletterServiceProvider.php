@@ -12,12 +12,15 @@ use Illuminate\Support\ServiceProvider;
 class NewsletterServiceProvider extends ServiceProvider
 {
 
-	public function register() {
+	public function register()
+	{
 		$this->app->bind(
 			'my-lara-newsletter',
 			'TobyMaxham\Newsletter\Sauerkraut\Newsletter'
 		);
+
 	}
+
 
 }
 
