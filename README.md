@@ -1,8 +1,8 @@
-# laravel-newsletter
-[![Latest Stable Version](https://poser.pugx.org/TobyMaxham/laravel-newsletter/v/stable.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
-[![Total Downloads](https://poser.pugx.org/TobyMaxham/laravel-newsletter/downloads.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
-[![Latest Unstable Version](https://poser.pugx.org/TobyMaxham/laravel-newsletter/v/unstable.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
-[![License](https://poser.pugx.org/TobyMaxham/laravel-newsletter/license.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
+# The Kraut Newsletter package
+[![Latest Stable Version](https://poser.pugx.org/TobyMaxham/kraut-newsletter/v/stable.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
+[![Total Downloads](https://poser.pugx.org/TobyMaxham/kraut-newsletter/downloads.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
+[![Latest Unstable Version](https://poser.pugx.org/TobyMaxham/kraut-newsletter/v/unstable.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
+[![License](https://poser.pugx.org/TobyMaxham/kraut-newsletter/license.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
 
 A package to manage newsletter in Laravel 5.
 
@@ -23,3 +23,7 @@ Register the Service Provider
 ## How to use
 
 
+
+
+### The name
+By using this package you'll get more time to eat kraut.

@@ -2,7 +2,7 @@
 
     "name": "tobymaxham/kraut-newsletter",
     "description": "A package to manage newsletters in larave 5",
-    "keywords": ["tobymaxham", "laravel", "nesletter", "sauerkraut"],
+    "keywords": ["tobymaxham", "laravel", "nesletter", "sauerkraut", "kraut"],
     "license": "MIT",
     "authors": [
         {
