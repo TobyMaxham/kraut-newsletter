@@ -1,4 +1,4 @@
-# laravel-newsletter
+# The Kraut Newsletter
 [![Latest Stable Version](https://poser.pugx.org/TobyMaxham/laravel-newsletter/v/stable.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
 [![Total Downloads](https://poser.pugx.org/TobyMaxham/laravel-newsletter/downloads.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
 [![Latest Unstable Version](https://poser.pugx.org/TobyMaxham/laravel-newsletter/v/unstable.svg)](https://packagist.org/packages/TobyMaxham/laravel-newsletter)
