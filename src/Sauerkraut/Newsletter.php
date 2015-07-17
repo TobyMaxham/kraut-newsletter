@@ -13,12 +13,34 @@ use TobyMaxham\Newsletter\Model\Subscriber;
 class Newsletter
 {
 
-	public function subscribe($email, $list = NULL)
+	public function subscribe($email, $info = NULL, $listname = NULL)
 	{
-		if (!is_null($list)) $list = $this->findOrCreateList($list);
-		$subscriber = new Subscriber();
-		$subscriber->email = $email;
-		$subscriber->save();
+		// So we can pass a list as second value without userinfo
+		if (func_num_args() == 2 && is_string($info))
+			list($info, $listname) = [[], $info];
+
+		if (!is_null($listname)) $list = $this->findOrCreateList($listname);
+		else $list = NULL;
+		if (is_null($info)) $info = [];
+		$info = array_merge($info, ['email' => $email]);
+
+		if (!is_null($subscriber = Subscriber::where('email', $email)->first())) {
+			if (!is_null($list) && !$list->subscribers->contains($subscriber->id)) {
+				$list->subscribers()->attach($subscriber);
+				$list->save();
+			}
+			return;
+		}
+
+		$this->createSubscriber($info, $list);
+	}
+
+	public function findOrCreateList($listName, $uid = FALSE)
+	{
+		$field = $uid ? 'uid' : 'name';
+		$list = NewsletterList::where($field, $listName)->first();
+		if (is_null($list)) return $this->createList($listName);
+		return $list;
 	}
 
 	/**
@@ -33,12 +55,42 @@ class Newsletter
 		return $list;
 	}
 
-	public function findOrCreateList($listName, $uid = FALSE)
+	/**
+	 * @param array $data
+	 * @param NewsletterList|NULL $list
+	 */
+	private function createSubscriber($data, $list)
 	{
-		$field = $uid ? 'uid' : 'name';
-		$list = NewsletterList::where($field, $listName)->first();
-		if (is_null($list)) return $this->createList($listName);
-		return $list;
+		$subscriber = new Subscriber();
+		foreach ($data as $key => $value) $subscriber->{$key} = $value;
+		$subscriber->save();
+
+		if (!is_null($list)) {
+			$list->subscribers()->attach($subscriber);
+			$list->save();
+		}
+	}
+
+	/**
+	 * @param string $email
+	 * @param string|NULL $listName
+	 */
+	public function unsubscribe($email, $listName = NULL)
+	{
+		$subscriber = Subscriber::where('email', $email)->first();
+		if(is_null($subscriber)) return;
+
+		foreach($subscriber->lists as $list)
+		{
+			if($list->name == $listName || $listName === NULL) {
+				$list->subscribers()->detach($subscriber);
+			}
+		}
+
+		if(is_null($listName))
+		{
+			$subscriber->delete();
+		}
 	}
 
 

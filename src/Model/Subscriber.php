@@ -22,4 +22,9 @@ class Subscriber extends Model
 		return parent::save($options);
 	}
 
+	public function lists()
+	{
+		return $this->belongsToMany('TobyMaxham\Newsletter\Model\NewsletterList', 'tmx_newsletter_list_subscriber', 'subscriber', 'list');
+	}
+
 } 
