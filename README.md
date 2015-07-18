@@ -11,6 +11,7 @@ A package to manage newsletter in Laravel 5.
 
 Register the Service Provider
 ```php
+
 // config/app.php
 'providers' => [
     ...
@@ -21,5 +22,6 @@ Register the Service Provider
 
 
 ## How to use
-
+```php
+```
 
