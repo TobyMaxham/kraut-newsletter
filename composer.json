@@ -1,7 +1,7 @@
 {
 
     "name": "tobymaxham/kraut-newsletter",
-    "description": "A package to manage newsletters in larave 5",
+    "description": "A package to manage newsletters in laravel 5",
     "keywords": ["tobymaxham", "laravel", "nesletter", "sauerkraut", "kraut"],
     "license": "MIT",
     "authors": [
@@ -16,7 +16,8 @@
         "source": "https://github.com/TobyMaxham/kraut-newsletter"
     },
     "require": {
-        "php": ">=5.5.9"
+        "php": ">=5.5.9",
+        "satooshi/php-coveralls": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*"
