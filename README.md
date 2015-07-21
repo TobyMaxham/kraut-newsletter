@@ -8,35 +8,52 @@
 
 A package to manage newsletter in Laravel 5.
 
-## Installation
-
-Register the Service Provider
-```php
-
-// config/app.php
-'providers' => [
-    ...
-    'TobyMaxham\Newsletter\NewsletterServiceProvider',
-
-];
-```
-
 ## Documentation
 
 We currently have essentially no documentation at the moment, but are working on it, and are open to pull requests.
 
+
 ## Installation
 
-First you have to publish the files to your root directory. And then you can run the migrations.
+Edit the Laravel Application config file and add the Newsletter Service Provider from this package.
+Register the Service Provider
 ```php
+// config/app.php
+'providers' => [
+    ...
+    'TobyMaxham\Newsletter\NewsletterServiceProvider',
+    ...
+];
+```
+
+If you use this package with database objects you can publish the Newsletter Service Provider and run the migration files.
+```
 php artisan vendor:publish --provider="TobyMaxham\Newsletter\NewsletterServiceProvider"
 
 // Create the migration
 php artisan make:migration create_lists_table
 php artisan make:migration create_subscribrs_table
 php artisan make:migration create_list_subscribrs_table
-
 ´´´
+
+Maybe you only use the API without database object, you can publish just the config file.
+```
+php artisan vendor:publish --provider="TobyMaxham\Newsletter\NewsletterServiceProvider" --tag="config"
+```
+
+After that you will have added this files to your root:
+    - config
+       kraut-newsletter.php
+    - database
+        - migrations
+            XXX_create_lists_table.php
+            XXX_create_subscribrs_table.php
+            XXX_create_list_subscribrs_table.php
+
+The configuration file will be accassible with Laravel Config Class:
+```php
+Config::get('kraut-newsletter.mode');
+```
 
 
 ## How to use

@@ -21,6 +21,10 @@ class NewsletterServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__ . '/../install/migrations/' => database_path('/migrations')
 		], 'migrations');
+
+		$this->publishes([
+			__DIR__ . '/../install/kraut-newsletter.php' => config_path('kraut-newsletter.php')
+		], 'config');
 	}
 
 	public function register()
