@@ -34,7 +34,7 @@ php artisan vendor:publish --provider="TobyMaxham\Newsletter\NewsletterServicePr
 php artisan make:migration create_lists_table
 php artisan make:migration create_subscribrs_table
 php artisan make:migration create_list_subscribrs_table
-´´´
+```
 
 Maybe you only use the API without database object, you can publish just the config file.
 ```
