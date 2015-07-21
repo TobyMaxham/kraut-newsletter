@@ -24,7 +24,7 @@ class Subscriber extends Model
 
 	public function lists()
 	{
-		return $this->belongsToMany('TobyMaxham\Newsletter\Model\NewsletterList', 'tmx_newsletter_list_subscriber', 'subscriber', 'list');
+		return $this->belongsToMany('TobyMaxham\Newsletter\Model\NewsletterList', 'tmx_list_subscriber', 'subscriber', 'list');
 	}
 
 } 

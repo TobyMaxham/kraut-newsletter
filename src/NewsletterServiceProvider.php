@@ -12,6 +12,17 @@ use Illuminate\Support\ServiceProvider;
 class NewsletterServiceProvider extends ServiceProvider
 {
 
+
+	/**
+	 * Bootstrap the application events.
+	 */
+	public function boot()
+	{
+		$this->publishes([
+			__DIR__ . '/../install/migrations/' => database_path('/migrations')
+		], 'migrations');
+	}
+
 	public function register()
 	{
 		$this->app->bind(

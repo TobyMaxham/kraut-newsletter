@@ -25,6 +25,19 @@ Register the Service Provider
 
 We currently have essentially no documentation at the moment, but are working on it, and are open to pull requests.
 
+## Installation
+
+First you have to publish the files to your root directory. And then you can run the migrations.
+```php
+php artisan vendor:publish --provider="TobyMaxham\Newsletter\NewsletterServiceProvider"
+
+// Create the migration
+php artisan make:migration create_lists_table
+php artisan make:migration create_subscribrs_table
+php artisan make:migration create_list_subscribrs_table
+
+´´´
+
 
 ## How to use
 
