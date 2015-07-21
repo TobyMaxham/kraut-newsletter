@@ -42,13 +42,15 @@ php artisan vendor:publish --provider="TobyMaxham\Newsletter\NewsletterServicePr
 ```
 
 After that you will have added this files to your root:
-    - config
-       kraut-newsletter.php
-    - database
-        - migrations
-            XXX_create_lists_table.php
-            XXX_create_subscribrs_table.php
-            XXX_create_list_subscribrs_table.php
+```
+- config
+   kraut-newsletter.php
+- database
+    - migrations
+        XXX_create_lists_table.php
+        XXX_create_subscribrs_table.php
+        XXX_create_list_subscribrs_table.php
+```
 
 The configuration file will be accassible with Laravel Config Class:
 ```php
