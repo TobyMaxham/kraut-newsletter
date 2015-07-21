@@ -1,10 +1,10 @@
 # The Kraut Newsletter package
 
-[![Build Status](https://travis-ci.org/TobyMaxham/kraut-newsletter.svg)](https://travis-ci.org/TobyMaxham/kraut-newsletter)
 [![Total Downloads](https://poser.pugx.org/TobyMaxham/kraut-newsletter/downloads.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
 [![Latest Stable Version](https://poser.pugx.org/TobyMaxham/kraut-newsletter/v/stable.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
 [![Latest Unstable Version](https://poser.pugx.org/TobyMaxham/kraut-newsletter/v/unstable.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
 [![License](https://poser.pugx.org/TobyMaxham/kraut-newsletter/license.svg)](https://packagist.org/packages/TobyMaxham/kraut-newsletter)
+[![Finished](https://img.shields.io/badge/finished-45%25-yellow.svg)](http://maxham.de)
 
 A package to manage newsletter in Laravel 5.
 
