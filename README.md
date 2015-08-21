@@ -7,6 +7,7 @@
 
 A package to manage newsletter in Laravel 5.
 
+
 ## Installation
 
 Register the Service Provider
@@ -16,9 +17,10 @@ Register the Service Provider
 'providers' => [
     ...
     'TobyMaxham\Newsletter\NewsletterServiceProvider',
-
+    ...
 ];
 ```
+
 
 ## Documentation
 
